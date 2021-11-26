@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="James Mumo">
+    <title>LOGGING AND REGESTRAITION</title>
+    <link rel="stylesheet" href="jay.css">
+    <script src="jay.js"></script>
+    <!-- <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee|Sofia|Abril Fatface|Rampart One|Merienda|Kalam|Cookie">
+    <script src="https://kit.fontawesome.com/7124872e09.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+        <div class="cards">
+            <div class="inner-card">
+                <div class="card-1" id="log">
+                    <h3>WELCOME <br/>BACK</h3>
+                    <form  name="logForm" onsubmit="return(heyYou())">
+                        <input type="text" placeholder="UserName" name="userName" pattern="[A-Z,a-z]*">
+                        <input type="password" placeholder="Password" id="pass" name="passn">
+                        <i class="far fa-eye-slash" id="hidden" onclick="ray()"></i>
+                        <i class="far fa-eye" id="show" onclick="ray()"></i>
+                        <input type="submit" class="btns" value="LOG">
+                    </form>
+                    <input type="button" class="btns" value="New Member" onclick="shift()" id="toReg">
+                    <a href="#">Forgot Password</a>
+                </div>
+                <div class="card-2" id="reg">
+                    <h3>CREATE ACCOUNT</h3>
+                    <form name="myForm" onsubmit="return(validate())">
+                        <input type="email" placeholder="EmailAddress" name="email">
+                        <input type="text" placeholder="SetUserName" name="userName">
+                        <input type="password" placeholder="Password" name="pass" id="pass1">
+                        <input type="password" placeholder="ConfirmPassword" name="passcon" id="pass2">
+                        <i class="far fa-eye-slash" id="hidden1" onclick="ray2()"></i>
+                        <i class="far fa-eye" id="show1" onclick="ray2()"></i>
+                        <input type="submit" class="btns" value="SUBMIT">
+                    </form>
+                    <input type="button" class="btns" value="HaveAccount" onclick="shift()" id="toLog">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+</body>
+</html>

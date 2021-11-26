@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --body-bg: #fff;
+    --body-color: #fff;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+body{
+    background: rgb(4,172,122);
+}
+.main >.container{
+    clip-path: polygon(60% 0%,100% 0%, 100% 100%,60% 100%, 40% 50%);
+    position: absolute;
+    z-index: -1;
+}
+.cards{
+    width: 350px;
+    height: 520px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+    border-radius: 30px;
+    overflow: hidden;
+    position: absolute;
+    right: 15%;
+}
+.inner-card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.card-1,.card-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 2.5s;
+}
+.card-1{
+    transform: translateX(100%);
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+input{
+    width: 80%;
+    margin: 20px 0px 10px 0px ;
+    font-size: 20px;
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid #f2c633;
+    background: transparent;
+    color: var(--body-color);
+    font-family: 'Merienda';
+}
+input::placeholder{
+    color: #fff;
+    font-family: MV Boli;
+}
+input:focus{
+    background: transparent;
+}
+input:active{
+    background: transparent;
+}
+.card-1 h3,.card-2 h3{
+    margin-bottom: 10%;
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: 'Rampart One';
+    color: #cf6c14;
+    text-align: center;
+}
+.card-2 h3{
+    margin-bottom: 5%;
+    font-size: 25px;
+}
+.btns{
+    outline: 0;
+    border: none;
+    padding: 10px 0 10px 0;
+    border-radius: 20px;
+    background: #cf6c14;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Kalam';
+    transition:  all 2s;
+}
+.btns:hover{
+    background: #f2c633;
+}
+i{
+    position: absolute;
+    float: right;
+    right: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#hidden,#hidden1{
+    display: none;
+}
+.card-1 a{
+    text-decoration: none;
+    margin-top: 30px;
+    transition: all 2s;
+    font-family: 'Sofia';
+    font-size: 20px;
+}
+.card-1 a:hover{
+    text-decoration: underline;
+}
+input:invalid{
+    animation: anime 1s  2s infinite ;
+    border-bottom: 2px solid red;
+}
+
+@keyframes anime{
+    from{
+        transform: translate(-5px);
+    }
+    to{
+        transform: translate(5px);
+    }
+}
+
+@media (max-width:1000px){
+    .main >.container{
+        clip-path: polygon(50% 0%,100% 0%, 100% 100%,50% 100%, 35% 50%);
+        position: absolute;
+        z-index: -1;
+    }
+    .cards{
+        position: absolute;
+        right: 10%;
+    }
+}
+@media (max-width:800px){
+    .main >.container{
+        clip-path: polygon(35% 0%,100% 0%, 100% 100%,35% 100%, 5% 50%);
+        position: absolute;
+        z-index: -1;
+    }
+    .cards{
+        position: absolute;
+        right: 4%;
+    }
+}
+
